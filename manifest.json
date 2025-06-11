@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Google's Map View for iOverlander",
+    "version": "1.0.0",
+    "description": "Google's Map View for iOverlander",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://ioverlander.com/*"
+            ],
+            "js": [
+                "content_script.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "service_worker.js"
+    },
+    "host_permissions": [
+        "https://ioverlander.com/*"
+    ],
+    "icons": {
+        "16": "images/icon_16.png",
+        "32": "images/icon_24.png",
+        "48": "images/icon_32.png",
+        "128": "images/icon_64.png"
+    }
+}
